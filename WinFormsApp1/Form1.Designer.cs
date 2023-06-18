@@ -35,6 +35,9 @@
             txtEmail = new TextBox();
             txtContact = new TextBox();
             btnSave = new Button();
+            label4 = new Label();
+            txtEnterEmail = new TextBox();
+            button1 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -97,11 +100,40 @@
             btnSave.UseVisualStyleBackColor = true;
             btnSave.Click += button1_Click;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(415, 53);
+            label4.Name = "label4";
+            label4.Size = new Size(84, 20);
+            label4.TabIndex = 7;
+            label4.Text = "Enter Email";
+            // 
+            // txtEnterEmail
+            // 
+            txtEnterEmail.Location = new Point(514, 50);
+            txtEnterEmail.Name = "txtEnterEmail";
+            txtEnterEmail.Size = new Size(199, 27);
+            txtEnterEmail.TabIndex = 8;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(584, 104);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 9;
+            button1.Text = "Find";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(480, 277);
+            ClientSize = new Size(725, 270);
+            Controls.Add(button1);
+            Controls.Add(txtEnterEmail);
+            Controls.Add(label4);
             Controls.Add(btnSave);
             Controls.Add(txtContact);
             Controls.Add(txtEmail);
@@ -125,5 +157,8 @@
         private TextBox txtEmail;
         private TextBox txtContact;
         private Button btnSave;
+        private Label label4;
+        private TextBox txtEnterEmail;
+        private Button button1;
     }
 }
