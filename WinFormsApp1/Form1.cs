@@ -32,6 +32,12 @@ namespace WinFormsApp1
             string email = txtEmail.Text;
             string contact = txtContact.Text;
 
+            if (!IsValidEmail(email))
+            {
+                MessageBox.Show("Email format is invalid");
+                return;
+            }
+
             SaveDataToCSV(name, email, contact);
 
             SqlConnection connection = new SqlConnection("Data Source=FAISAL-PC\\SQLEXPRESS;Initial Catalog=UserInformation;Integrated Security=True");
