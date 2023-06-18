@@ -33,10 +33,18 @@ namespace WinFormsApp1
 
             SqlConnection connection = new SqlConnection("Data Source=FAISAL-PC\\SQLEXPRESS;Initial Catalog=UserInformation;Integrated Security=True");
             connection.Open();
-            SqlCommand command = new SqlCommand("INSERT INTO UserData(Name,Email,Contact) values ('" + name + "','" + email + "','" + contact + "')", connection);
 
-            int i = command.ExecuteNonQuery();
-            if (i != 0)
+            string query = "IF NOT EXISTS (SELECT 1 FROM UserData WHERE Email = @Email) " +
+                           "INSERT INTO UserData (Name, Email, Contact) VALUES (@Name, @Email, @Contact)";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@Name", name);
+            command.Parameters.AddWithValue("@Email", email);
+            command.Parameters.AddWithValue("@Contact", contact);
+
+            int rowsAffected = command.ExecuteNonQuery();
+
+            if (rowsAffected > 0)
             {
                 MessageBox.Show("Saved");
             }
@@ -44,6 +52,7 @@ namespace WinFormsApp1
             {
                 MessageBox.Show("Error");
             }
+
 
             connection.Close();
 
