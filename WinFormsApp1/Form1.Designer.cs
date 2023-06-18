@@ -70,6 +70,7 @@
             // 
             // txtName
             // 
+            txtName.BackColor = SystemColors.Control;
             txtName.Location = new Point(164, 44);
             txtName.Name = "txtName";
             txtName.Size = new Size(202, 27);
@@ -77,6 +78,7 @@
             // 
             // txtEmail
             // 
+            txtEmail.BackColor = SystemColors.Control;
             txtEmail.Location = new Point(164, 92);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(202, 27);
@@ -85,6 +87,7 @@
             // 
             // txtContact
             // 
+            txtContact.BackColor = SystemColors.Control;
             txtContact.Location = new Point(164, 140);
             txtContact.Name = "txtContact";
             txtContact.Size = new Size(202, 27);
@@ -92,12 +95,13 @@
             // 
             // btnSave
             // 
+            btnSave.BackColor = SystemColors.ActiveCaption;
             btnSave.Location = new Point(154, 206);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(94, 29);
             btnSave.TabIndex = 6;
             btnSave.Text = "Save";
-            btnSave.UseVisualStyleBackColor = true;
+            btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += button1_Click;
             // 
             // label4
@@ -111,6 +115,7 @@
             // 
             // txtEnterEmail
             // 
+            txtEnterEmail.BackColor = SystemColors.Control;
             txtEnterEmail.Location = new Point(514, 50);
             txtEnterEmail.Name = "txtEnterEmail";
             txtEnterEmail.Size = new Size(199, 27);
@@ -118,18 +123,20 @@
             // 
             // button1
             // 
+            button1.BackColor = SystemColors.ActiveCaption;
             button1.Location = new Point(584, 104);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 9;
             button1.Text = "Find";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click_1;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.GradientActiveCaption;
             ClientSize = new Size(725, 270);
             Controls.Add(button1);
             Controls.Add(txtEnterEmail);
