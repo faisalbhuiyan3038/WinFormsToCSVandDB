@@ -40,7 +40,7 @@ namespace WinFormsApp1
 
             SaveDataToCSV(name, email, contact);
 
-            SqlConnection connection = new SqlConnection("Data Source=FAISAL-PC\\SQLEXPRESS;Initial Catalog=UserInformation;Integrated Security=True");
+            SqlConnection connection = new SqlConnection("Data Source=DESKTOP-QFRL6D9\\SQLEXPRESS;Initial Catalog=UserInformation;Integrated Security=True");
             connection.Open();
 
             string query = "IF NOT EXISTS (SELECT 1 FROM UserData WHERE Email = @Email) " +
@@ -89,7 +89,7 @@ namespace WinFormsApp1
         {
             string email = txtEnterEmail.Text;
 
-            SqlConnection connection = new SqlConnection("Data Source=FAISAL-PC\\SQLEXPRESS;Initial Catalog=UserInformation;Integrated Security=True");
+            SqlConnection connection = new SqlConnection("Data Source=DESKTOP-QFRL6D9\\SQLEXPRESS;Initial Catalog=UserInformation;Integrated Security=True");
             connection.Open();
 
             string query = "SELECT * FROM UserData WHERE Email = @Email";
